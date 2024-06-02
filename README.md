@@ -19,16 +19,22 @@ git clone https://github.com/yourusername/SimpleCalculator.git
 ```
 
 2. Navigate to the project directory:
+```bash
 cd SimpleCalculator
+```
 
-3. Install the necessary packages:
+4. Install the necessary packages:
+```bash
 npm install
+```
 
 Usage
 To run the application in development mode, use the following command:
 
 For Android:
+```bash
 npx react-native run-android
+```
 
 Contributing
 We welcome contributions from the community. If you wish to contribute, please take a moment to review our guidelines:
