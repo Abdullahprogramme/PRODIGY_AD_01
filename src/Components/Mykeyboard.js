@@ -8,7 +8,15 @@ export default function Mykeyboard() {
     const [firstNumber, setFirstNumber] = useState('');
     const [secondNumber, setSecondNumber] = useState('');
     const [operator, setOperator] = useState('');
+    const [displayOperator, setDisplayOperator] = useState('');
     const [result, setResult] = useState(null);
+
+    const operatorMapping = {
+        '+': '+',
+        '-': '-',
+        '*': 'x',
+        '/': '÷'
+    }
 
 
     const handleNumberPress = (ButtonValue) => {
@@ -24,6 +32,7 @@ export default function Mykeyboard() {
             setFirstNumber((parseFloat(firstNumber) / 100).toString());
         } else {
             setOperator(ButtonValue);
+            setDisplayOperator(operatorMapping[ButtonValue]);
             setSecondNumber(firstNumber);
             setFirstNumber('');
         }
@@ -33,6 +42,7 @@ export default function Mykeyboard() {
         setFirstNumber('');
         setSecondNumber('');
         setOperator('');
+        setDisplayOperator('');
         setResult(null);
     }
 
@@ -97,7 +107,7 @@ export default function Mykeyboard() {
             }}>
                 <Text style={Styles.screenSecondNumber}>
                     {secondNumber}
-                    <Text style={{color: 'black', fontSize: 50, fontWeight: '500'}}>{operator}</Text>
+                    <Text style={{color: 'black', fontSize: 50, fontWeight: '500'}}>{displayOperator}</Text>
                 </Text>
                 {firstNumberDisplay()}
                 
