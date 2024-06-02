@@ -72,3 +72,11 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# iOS build files
+ios/build/
+ios/Pods/
+*.xcworkspace
+*.xcodeproj
+*.xcuserstate
+DerivedData/
