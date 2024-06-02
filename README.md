@@ -16,6 +16,7 @@ To install and run the SimpleCalculator application, follow these steps:
 
 ```bash
 git clone https://github.com/yourusername/SimpleCalculator.git
+```
 
 2. Navigate to the project directory:
 cd SimpleCalculator
